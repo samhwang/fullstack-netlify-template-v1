@@ -1,8 +1,5 @@
 import { t } from '../builder';
 
 export const userRouter = t.router({
-  me: t.procedure.query((req) => {
-    console.log({ req });
-    return "hello, it's me";
-  }),
+  me: t.procedure.query((_req) => "hello, it's me"),
 });

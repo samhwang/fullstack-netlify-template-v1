@@ -13,7 +13,7 @@ async function renderRoot() {
   const RootComponent = (
     <StrictMode>
       <TRPCProvider>
-        <RouterProvider />;
+        <RouterProvider />
       </TRPCProvider>
     </StrictMode>
   );

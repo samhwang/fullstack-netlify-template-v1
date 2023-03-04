@@ -1,4 +1,8 @@
-import awsLambdaFastify from '@fastify/aws-lambda';
-import { app } from '../server';
+import { createContext } from '../trpc/context';
+import { appRouter } from '../trpc/router';
+import { netlifyTRPCHandler } from '../trpc/netlify-functions-adapter';
 
-export const handler = awsLambdaFastify(app);
+export const handler = netlifyTRPCHandler({
+  router: appRouter,
+  createContext,
+});

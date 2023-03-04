@@ -1,17 +1,8 @@
+import { HandlerContext, HandlerEvent } from '@netlify/functions';
 import { inferAsyncReturnType } from '@trpc/server';
-import { CreateFastifyContextOptions } from '@trpc/server/adapters/fastify';
-// import { HandlerEvent, HandlerContext } from '@netlify/functions';
 
-// export function createContext(event: HandlerEvent, context: HandlerContext) {
-//   console.log({ event, context });
-//   return { event, context };
-// }
-//
-// export type Context = inferAsyncReturnType<typeof createContext>;
-
-export function createContext({ req }: CreateFastifyContextOptions) {
-  const user = { name: req.headers.username ?? 'anonymous' };
-  return { req, user };
+export function createContext(_event: HandlerEvent, _context: HandlerContext) {
+  return {};
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>;
