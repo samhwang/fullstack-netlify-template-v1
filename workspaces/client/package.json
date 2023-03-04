@@ -23,13 +23,19 @@
     "format": "npm run lint:fix && npm run prettier"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.24.10",
+    "@trpc/client": "^10.14.0",
+    "@trpc/react-query": "^10.14.0",
+    "app-backend": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
     "react-hook-form": "^7.43.3",
     "react-router-dom": "^6.8.2",
     "web-vitals": "^3.1.1"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^4.24.13",
     "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

@@ -1,15 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import IndexPage from './index-page/index.page';
+import RouterProvider from './providers/router';
+import { TRPCProvider } from './providers/trpc';
 import reportWebVitals from './reportWebVitals';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <IndexPage />,
-  },
-]);
 
 async function renderRoot() {
   if (import.meta.env.DEV) {
@@ -19,7 +12,9 @@ async function renderRoot() {
 
   const RootComponent = (
     <StrictMode>
-      <RouterProvider router={router} />;
+      <TRPCProvider>
+        <RouterProvider />;
+      </TRPCProvider>
     </StrictMode>
   );
 
@@ -33,4 +28,4 @@ renderRoot();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();
