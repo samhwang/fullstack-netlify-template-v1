@@ -1,0 +1,44 @@
+{
+  "name": "app-frontend",
+  "private": true,
+  "type": "module",
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "scripts": {
+    "postinstall": "msw init public",
+    "dev": "vite",
+    "prebuild": "rimraf dist",
+    "build": "rimraf dist && vite build",
+    "preview": "vite preview",
+    "pretest": "rimraf coverage",
+    "typecheck": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:CI": "npm run test && npm run typecheck",
+    "test:preview": "vitest-preview",
+    "lint": "eslint --cache .",
+    "lint:fix": "npm run lint --fix",
+    "prettier": "prettier --cache --write .",
+    "format": "npm run lint:fix && npm run prettier"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.3",
+    "react-router-dom": "^6.8.2",
+    "web-vitals": "^3.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react-dom": "^18.0.11",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react-swc": "^3.2.0",
+    "jsdom": "^21.1.0",
+    "vite": "^4.1.4"
+  }
+}

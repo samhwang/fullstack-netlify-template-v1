@@ -17,16 +17,16 @@
     "dev": {
       "outputs": []
     },
-    "quiz-backend#dev": {
+    "app-backend#dev": {
       "outputs": [],
-      "dependsOn": ["quiz-client#build"]
+      "dependsOn": ["app-client#build"]
     },
-    "quiz-backend#prisma:migrate:deploy": {
+    "app-backend#prisma:migrate:deploy": {
       "outputs": []
     },
-    "quiz-client#build": {
+    "app-client#build": {
       "outputs": ["dist/**"],
-      "dependsOn": ["quiz-backend#prisma:migrate:deploy"]
+      "dependsOn": ["app-backend#prisma:migrate:deploy"]
     }
   }
 }

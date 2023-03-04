@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# Eslint
+.eslintcache
+
+# Test Coverage
+coverage
+
+# Generated files
+public/mockServiceWorker.js
+.vitest-preview
