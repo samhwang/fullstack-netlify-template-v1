@@ -2,31 +2,39 @@
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "test": {
-      "dependsOn": [],
-      "outputs": []
+      "outputs": ["coverage/**"]
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "format": {
-      "outputs": []
+      "dependsOn": ["lint"]
     },
-    "typecheck": {
-      "outputs": []
+    "typecheck": {},
+    "app-backend#prisma:generate": {
+      "cache": false
     },
-    "dev": {
-      "outputs": []
+    "app-backend#prisma:migrate": {
+      "cache": false
     },
     "app-backend#dev": {
-      "outputs": [],
-      "dependsOn": ["app-client#build"]
+      "dependsOn": ["app-client#build", "prisma:migrate", "prisma:generate"],
+      "cache": false,
+      "persistent": true
     },
     "app-backend#prisma:migrate:deploy": {
       "outputs": []
     },
+    "app-client#msw:init": {
+      "outputs": ["public/mockServiceWorker.js"]
+    },
+    "app-client#dev": {
+      "dependsOn": ["msw:init"],
+      "cache": false,
+      "persistent": true
+    },
     "app-client#build": {
-      "outputs": ["dist/**"],
-      "dependsOn": ["app-backend#prisma:migrate:deploy"]
+      "dependsOn": ["msw:init", "app-backend#prisma:migrate:deploy"],
+      "inputs": ["vite.config.ts", "src/**", "public/**"],
+      "outputs": ["dist/**"]
     }
   }
 }

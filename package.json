@@ -8,7 +8,16 @@
   "workspaces": [
     "./workspaces/**"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "typecheck": "turbo run typecheck",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:backend": "turbo run dev --filter=vagabond-app-backend",
+    "dev:client": "turbo run dev --filter=vagabond-app-client"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.14.6",

@@ -1,12 +1,12 @@
 {
-  "name": "app-frontend",
+  "name": "app-client",
   "private": true,
   "type": "module",
   "msw": {
     "workerDirectory": "public"
   },
   "scripts": {
-    "postinstall": "msw init public",
+    "msw:init": "msw init public",
     "dev": "vite",
     "prebuild": "rimraf dist",
     "build": "rimraf dist && vite build",
