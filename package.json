@@ -15,8 +15,8 @@
     "typecheck": "turbo run typecheck",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "dev:backend": "turbo run dev --filter=vagabond-app-backend",
-    "dev:client": "turbo run dev --filter=vagabond-app-client"
+    "dev:backend": "turbo run dev --filter=app-backend",
+    "dev:client": "turbo run dev --filter=app-client"
   },
   "dependencies": {},
   "devDependencies": {
