@@ -1,5 +1,5 @@
-import { t } from '../builder';
+import { router, publicProcedure } from '../builder';
 
-export const userRouter = t.router({
-  me: t.procedure.query((_req) => "hello, it's me"),
+export const userRouter = router({
+  me: publicProcedure.query((_req) => "hello, it's me"),
 });

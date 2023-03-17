@@ -1,7 +1,9 @@
-import { t } from './builder';
+import { router } from './builder';
+import { healthcheck } from './routers/healthcheck';
 import { userRouter } from './routers/user';
 
-export const appRouter = t.router({
+export const appRouter = router({
+  healthcheck,
   users: userRouter,
 });
 
