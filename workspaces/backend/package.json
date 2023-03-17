@@ -23,6 +23,6 @@
     "@netlify/functions": "^1.3.0",
     "@prisma/client": "^4.8.0",
     "@trpc/server": "^10.14.0",
-    "trpc-netlify-functions": "^0.2.0"
+    "trpc-netlify-functions": "^0.3.0"
   }
 }
