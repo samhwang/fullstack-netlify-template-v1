@@ -30,5 +30,5 @@ There are 3 ways that you can adopt this template.
 cp .env.sample .env
 docker compose up -d db
 npm install
-npm run dev
+pnpm run dev
 ```

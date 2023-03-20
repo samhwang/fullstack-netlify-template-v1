@@ -4,10 +4,7 @@
   "private": true,
   "description": "Fullstack Netlify Template",
   "license": "ISC",
-  "packageManager": "npm@8.19.4",
-  "workspaces": [
-    "./workspaces/**"
-  ],
+  "packageManager": "pnpm@7.30.0",
   "scripts": {
     "test": "turbo run test",
     "lint": "turbo run lint",

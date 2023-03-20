@@ -4,16 +4,16 @@
 
 ```shell
 # Run unit tests
-npm run test
+pnpm run test
 
 # Run linting, code formatting and typechecks
-npm run lint
-npm run format
-npm run typecheck
+pnpm run lint
+pnpm run format
+pnpm run typecheck
 
 # Run the local dev server
-npm run dev
+pnpm run dev
 
 # Build the client side bundle
-npm run build
+pnpm run build
 ```

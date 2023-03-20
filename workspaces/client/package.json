@@ -15,12 +15,12 @@
     "typecheck": "tsc",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:CI": "npm run test && npm run typecheck",
+    "test:CI": "pnpm run test && pnpm run typecheck",
     "test:preview": "vitest-preview",
     "lint": "eslint --cache .",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "pnpm run lint --fix",
     "prettier": "prettier --cache --write .",
-    "format": "npm run lint:fix && npm run prettier"
+    "format": "pnpm run lint:fix && pnpm run prettier"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.24.10",

@@ -4,18 +4,18 @@
 
 ```shell
 # Run unit tests
-npm run test
+pnpm run test
 
 # Run linting, code formatting and typechecks
-npm run lint
-npm run format
-npm run typecheck
+pnpm run lint
+pnpm run format
+pnpm run typecheck
 
 # Run the local dev Netlify server
-npm run dev
+pnpm run dev
 
 # Prisma scripts
-npm run prisma:migrate
-npm run prisma:generate
-npm run prisma:studio
+pnpm run prisma:migrate
+pnpm run prisma:generate
+pnpm run prisma:studio
 ```
