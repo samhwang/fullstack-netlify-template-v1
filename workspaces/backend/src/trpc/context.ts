@@ -1,9 +1,11 @@
 import { inferAsyncReturnType } from '@trpc/server';
 import { CreateNetlifyContextOptions } from 'trpc-netlify-functions';
+import { PrismaClient } from '@prisma/client';
 
-export function createContext({ event: _event, context: _context }: CreateNetlifyContextOptions) {
-  // empty context
-  return {};
+const prisma = new PrismaClient();
+
+export function createContext({ event, context }: CreateNetlifyContextOptions) {
+  return { event, context, prisma };
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>;
