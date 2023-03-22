@@ -14,7 +14,7 @@ There are 3 ways that you can adopt this template.
   - [Vite](https://vitejs.dev/), [React](https://reactjs.org) and [TypeScript](https://www.typescriptlang.org/) - The core of the client side.
   - [React Router](https://reactrouter.com/) - To handle app client side routing
   - [React Hook Form](https://react-hook-form.com/) - To handle form creation and validation.
-- Backend: bootstrapped with Netlify
+- Backend: built with [`trpc-netlify-functions`](https://github.com/samhwang/trpc-netlify-functions)
   - [Netlify Functions](https://www.netlify.com/products/functions/) - Serverless functions offered by Netlify.
   - [Prisma](https://prisma.io) - Next-generation Node.js and TypeScript ORM.
   - [tRPC](https://trpc.io) - End-to-end typesafe APIs made easy.
