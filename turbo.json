@@ -34,7 +34,7 @@
       "persistent": true
     },
     "app-client#build": {
-      "dependsOn": ["msw:init", "app-backend#prisma:migrate:deploy"],
+      "dependsOn": ["app-backend#prisma:migrate:deploy"],
       "inputs": [
         "vite.config.ts",
         "public/**",
