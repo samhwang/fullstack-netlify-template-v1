@@ -33,7 +33,7 @@ export function TRPCProvider({ children }: TRPCProviderProps) {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <QueryErrorBoundary>
-          <Suspense fallback="Loading...">{children}</Suspense>
+          <Suspense fallback='Loading...'>{children}</Suspense>
         </QueryErrorBoundary>
       </QueryClientProvider>
     </trpc.Provider>
@@ -60,7 +60,7 @@ function QueryErrorBoundaryFallback({ resetErrorBoundary }: FallbackProps) {
   return (
     <div>
       There was an error!
-      <button type="button" onClick={() => resetErrorBoundary()}>
+      <button type='button' onClick={() => resetErrorBoundary()}>
         Try again
       </button>
     </div>
