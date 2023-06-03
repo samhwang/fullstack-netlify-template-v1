@@ -1,8 +1,0 @@
-package.json
-dist
-coverage
-*.d.ts
-
-# Ignoring generated files
-public/mockServiceWorker.js
-.vitest-preview

@@ -19,8 +19,7 @@ There are 3 ways that you can adopt this template.
   - [Prisma](https://prisma.io) - Next-generation Node.js and TypeScript ORM.
   - [tRPC](https://trpc.io) - End-to-end typesafe APIs made easy.
 - Common tools:
-  - [ESLint](https://eslint.org/) using the [AirBnB ruleset](https://github.com/airbnb/javascript) and [Prettier](https://prettier.io/)
-    for code formatting.
+  - [Rome](https://https://rome.tools/) for code formatting.
   - [Vitest](https://vitest.dev/) for running unit tests with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
   - [msw](https://mswjs.io/) to fake a service worker request to intercept API calls.
 
