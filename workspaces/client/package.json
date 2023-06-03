@@ -17,10 +17,11 @@
     "test:watch": "vitest watch",
     "test:CI": "pnpm run test && pnpm run typecheck",
     "test:preview": "vitest-preview",
-    "lint": "eslint --cache .",
-    "lint:fix": "pnpm run lint --fix",
-    "prettier": "prettier --cache --write .",
-    "format": "pnpm run lint:fix && pnpm run prettier"
+    "ci": "rome ci ./src/**.ts ./src/**.tsx",
+    "lint": "rome check ./src/**.ts ./src/**.tsx",
+    "lint:fix": "rome check --apply ./src/**.ts ./src/**.tsx",
+    "lint:fix:unsafe": "rome check --apply-unsafe ./src/**.ts ./src/**.tsx",
+    "format": "rome format --write ./src/**.ts ./src/**.tsx"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.12",
