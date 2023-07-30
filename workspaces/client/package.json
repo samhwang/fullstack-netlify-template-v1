@@ -7,9 +7,7 @@
   },
   "scripts": {
     "msw:init": "msw init public",
-    "dev:vite": "vite",
-    "dev:netlify": "netlify dev",
-    "dev": "pnpm run dev:netlify",
+    "dev": "vite",
     "prebuild": "rimraf dist",
     "build": "rimraf dist && vite build",
     "preview": "vite preview",
