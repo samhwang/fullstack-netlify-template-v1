@@ -13,8 +13,8 @@
     "typecheck": "tsc",
     "netlify:dev": "cd ../.. && netlify functions:serve",
     "dev": "pnpm run netlify:dev",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:migrate:deploy": "prisma migrate deploy",
+    "prisma:migrate": "prisma migrate dev --skip-generate",
+    "prisma:migrate:deploy": "prisma migrate deploy --skip-generate",
     "prisma:generate": "prisma generate",
     "prisma:studio": "prisma studio"
   },
