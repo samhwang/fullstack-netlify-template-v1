@@ -15,11 +15,6 @@
     "app-backend#prisma:migrate": {
       "cache": false
     },
-    "app-backend#dev": {
-      "dependsOn": ["app-client#build", "prisma:migrate", "prisma:generate"],
-      "cache": false,
-      "persistent": true
-    },
     "app-backend#prisma:migrate:deploy": {
       "inputs": ["prisma/schema.prisma"],
       "outputs": ["node_modules/.prisma/client"]
@@ -29,12 +24,12 @@
       "outputs": ["public/mockServiceWorker.js"]
     },
     "app-client#dev": {
-      "dependsOn": ["msw:init"],
+      "dependsOn": ["msw:init", "app-backend#prisma:migrate", "app-backend#prisma:generate"],
       "cache": false,
       "persistent": true
     },
     "app-client#build": {
-      "dependsOn": ["app-backend#prisma:migrate:deploy"],
+      "dependsOn": ["app-backend#prisma:migrate:deploy", "app-backend#prisma:generate"],
       "inputs": [
         "vite.config.ts",
         "public/**",
